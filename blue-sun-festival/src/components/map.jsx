@@ -1,26 +1,74 @@
-import { useEffect } from "react";
-import L from "leaflet";
+import { useEffect, useRef } from "react";
+import { renderToString } from "react-dom/server";
+import useGeolocation from "../hooks/useGeolocation"; // OUR LIVE LOCATION
+import { FaLocationArrow } from "react-icons/fa"; // OUR CUSTOM ICON (REACT ICONS)
+import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
 
 const Map = () => {
+  const { position } = useGeolocation();
+  const mapRef = useRef(null);
+  const markerRef = useRef(null);
+
   useEffect(() => {
+    // MAP SETTINGS
+    // ----------------------------------------------
     const map = L.map("map", {
-      attributionControl: false,
-      zoomControl: false,
-    }).setView([56, 10], 6);
+      attributionControl: false, // Turn off Watermark on right bottom
+      zoomControl: false, // Turn off Zoom Buttons + and -
+    }).setView([56.492725, 10.031952], 6);
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png",
       {
-        attribution:
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: "abcd",
         maxZoom: 20,
       },
     ).addTo(map);
+    mapRef.current = map; // this need explanation
     return () => {
       map.remove();
     };
   }, []);
-  return <div id="map" className="h-[700px] w-full"></div>;
+  //  ----------------------------------------------
+
+  // MARKER SECTION (IT SHOWS YOUR LOCATION)
+  // ----------------------------------------------
+  // Add marker when position updates
+  useEffect(() => {
+    if (position && mapRef.current) {
+      const { lat, lng } = position;
+
+      // OUR CUSTOM ICON (WE STORED THAT INTO VARIABLE)
+      const locationIcon = L.divIcon({
+        className: "",
+        html: renderToString(<FaLocationArrow size={20} />),
+        iconSize: [20, 20],
+        iconAnchor: [10, 10],
+      });
+
+      // REMOVES OLD MARKER (if exist)
+      if (markerRef.current) {
+        mapRef.current.removeLayer(markerRef.current);
+      }
+
+      // ADD MARKER TO THE CURRENT POSITION
+      markerRef.current = L.marker([lat, lng], { icon: locationIcon }).addTo(
+        mapRef.current,
+      );
+
+      // CENTER MAP ON OUR LOCATION
+      mapRef.current.setView([lat, lng], 18);
+    }
+  }, [position]);
+  // ----------------------------------------------
+
+  // RETURN SECTION
+  // ----------------------------------------------
+  // HERE WE RETURN MAP WITH OUR CUSTOM STYLING
+  return (
+    <div className="relative w-full h-[700px]">
+      <div id="map" className="h-full w-full"></div>
+    </div>
+  );
+  //  ----------------------------------------------
 };
 
 export default Map;
