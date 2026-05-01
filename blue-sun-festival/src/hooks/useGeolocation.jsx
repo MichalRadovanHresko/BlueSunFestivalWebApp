@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 const useGeolocation = () => {
   const [position, setPosition] = useState(null);
+
+  // Error handling
   const [error, setError] = useState(
     !navigator.geolocation
       ? "Geolocation is not supported by your browser"

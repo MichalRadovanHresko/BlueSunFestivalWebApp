@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
-import { renderToString } from "react-dom/server";
-import useGeolocation from "../hooks/useGeolocation"; // OUR LIVE LOCATION
-import { FaLocationArrow } from "react-icons/fa"; // OUR CUSTOM ICON (REACT ICONS)
+import { createLocationIcon, createToiletIcon } from "./mapIcons"; // OUR CUSTOM ICONS
+import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
 
 const Map = () => {
@@ -23,6 +22,7 @@ const Map = () => {
       },
     ).addTo(map);
     mapRef.current = map; // this need explanation
+    L.marker([50, 1], { icon: createToiletIcon() }).addTo(map);
     return () => {
       map.remove();
     };
@@ -36,13 +36,7 @@ const Map = () => {
     if (position && mapRef.current) {
       const { lat, lng } = position;
 
-      // OUR CUSTOM ICON (WE STORED THAT INTO VARIABLE)
-      const locationIcon = L.divIcon({
-        className: "",
-        html: renderToString(<FaLocationArrow size={20} />),
-        iconSize: [20, 20],
-        iconAnchor: [10, 10],
-      });
+      const locationIcon = createLocationIcon();
 
       // REMOVES OLD MARKER (if exist)
       if (markerRef.current) {
