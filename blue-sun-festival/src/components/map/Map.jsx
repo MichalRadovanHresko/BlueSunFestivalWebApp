@@ -1,5 +1,10 @@
 import { useEffect, useRef } from "react";
-import { createLocationIcon, createToiletIcon } from "./mapIcons"; // OUR CUSTOM ICONS
+import {
+  createLocationIcon,
+  createToiletIcon,
+  createFoodLocation,
+  createStageIcon,
+} from "./mapIcons"; // OUR CUSTOM ICONS
 import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
 
@@ -22,7 +27,13 @@ const Map = () => {
       },
     ).addTo(map);
     mapRef.current = map; // this need explanation
-    L.marker([50, 1], { icon: createToiletIcon() }).addTo(map);
+
+    // MARKER SECTION (SHOWS CUSTOM MARKERS ON OUR MAP)
+    L.marker([56.12032, 10.158863], { icon: createToiletIcon() }).addTo(map);
+    L.marker([56.120483, 10.160338], { icon: createFoodLocation() }).addTo(map);
+    L.marker([56.119287, 10.158926], { icon: createStageIcon() }).addTo(map);
+    // -------------------------------------------------
+
     return () => {
       map.remove();
     };
