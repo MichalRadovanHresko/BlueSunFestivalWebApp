@@ -7,6 +7,7 @@ import {
 } from "./mapIcons"; // OUR CUSTOM ICONS
 import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
+import festivalMap from "../../assets/map.png"; // IMG of our map on the map
 
 const Map = () => {
   const { position } = useGeolocation();
@@ -19,14 +20,23 @@ const Map = () => {
     const map = L.map("map", {
       attributionControl: false, // Turn off Watermark on right bottom
       zoomControl: false, // Turn off Zoom Buttons + and -
-    }).setView([56.492725, 10.031952], 6);
+    }).setView([56.155, 10.2], 16);
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png",
       {
         maxZoom: 20,
+        minZoom: 16,
       },
     ).addTo(map);
     mapRef.current = map; // this need explanation
+
+    // ----------------------------------------------
+    // MAP IMAGE THAT WE ARE PUTTING ON THE REAL MAP
+    const festivalBounds = L.latLngBounds([56.1502, 10.1885], [56.16, 10.21]);
+
+    L.imageOverlay(festivalMap, festivalBounds, {}).addTo(map);
+
+    // ----------------------------------------------
 
     // MARKER SECTION (SHOWS CUSTOM MARKERS ON OUR MAP)
     L.marker([56.12032, 10.158863], { icon: createToiletIcon() }).addTo(map);
@@ -54,13 +64,10 @@ const Map = () => {
         mapRef.current.removeLayer(markerRef.current);
       }
 
-      // ADD MARKER TO THE CURRENT POSITION
+      // ADD MARKER TO YOUR CURRENT POSITION
       markerRef.current = L.marker([lat, lng], { icon: locationIcon }).addTo(
         mapRef.current,
       );
-
-      // CENTER MAP ON OUR LOCATION
-      mapRef.current.setView([lat, lng], 18);
     }
   }, [position]);
   // ----------------------------------------------
