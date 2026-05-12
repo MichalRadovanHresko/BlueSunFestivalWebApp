@@ -32,7 +32,7 @@ const Map = () => {
 
     // ----------------------------------------------
     // MAP IMAGE THAT WE ARE PUTTING ON THE REAL MAP
-    const festivalBounds = L.latLngBounds([56.1502, 10.1885], [56.16, 10.21]);
+    const festivalBounds = L.latLngBounds([56.149, 10.1885], [56.16, 10.22]);
 
     L.imageOverlay(festivalMap, festivalBounds, {}).addTo(map);
 
@@ -76,7 +76,7 @@ const Map = () => {
   // ----------------------------------------------
   // HERE WE RETURN MAP WITH OUR CUSTOM STYLING
   return (
-    <div className="relative w-full h-[700px]">
+    <div className="relative w-full h-[600px]">
       <div id="map" className="h-full w-full"></div>
     </div>
   );
