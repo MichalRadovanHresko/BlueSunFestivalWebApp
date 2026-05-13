@@ -10,7 +10,7 @@ const Filter = () => {
   ];
   const newFilterOptions = options.map((opt) => <li>{opt}</li>);
   return (
-    <ul className="flex flex-row flex-nowrap list-none gap-[5px]">
+    <ul className="flex flex-row flex-nowrap justify-center list-none gap-[5px]">
       {newFilterOptions}
     </ul>
   );

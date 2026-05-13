@@ -76,7 +76,7 @@ const Map = () => {
   // ----------------------------------------------
   // HERE WE RETURN MAP WITH OUR CUSTOM STYLING
   return (
-    <div className="relative w-full h-[600px]">
+    <div className="relative w-full h-[520px]">
       <div id="map" className="h-full w-full"></div>
     </div>
   );
