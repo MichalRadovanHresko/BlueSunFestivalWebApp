@@ -20,7 +20,7 @@ const Map = () => {
     const map = L.map("map", {
       attributionControl: false, // Turn off Watermark on right bottom
       zoomControl: false, // Turn off Zoom Buttons + and -
-    }).setView([56.155, 10.2], 16);
+    }).setView([56.155, 10.207], 16);
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png",
       {
@@ -32,7 +32,7 @@ const Map = () => {
 
     // ----------------------------------------------
     // MAP IMAGE THAT WE ARE PUTTING ON THE REAL MAP
-    const festivalBounds = L.latLngBounds([56.149, 10.1885], [56.16, 10.22]);
+    const festivalBounds = L.latLngBounds([56.152, 10.2], [56.16, 10.22]);
 
     L.imageOverlay(festivalMap, festivalBounds, {}).addTo(map);
 
@@ -76,7 +76,7 @@ const Map = () => {
   // ----------------------------------------------
   // HERE WE RETURN MAP WITH OUR CUSTOM STYLING
   return (
-    <div className="relative w-full h-[520px]">
+    <div className="relative w-full h-[66vh] z-[0]">
       <div id="map" className="h-full w-full"></div>
     </div>
   );
