@@ -35,7 +35,11 @@ const Header = () => {
             />
           </svg>
         </svg>
-        <img src={logo} alt="logo" className="w-[150px] h-[49px]" />
+        <img
+          src={logo}
+          alt="Blue Sun Festival logo"
+          className="w-[150px] h-[49px]"
+        />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
