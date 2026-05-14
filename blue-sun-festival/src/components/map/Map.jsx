@@ -8,6 +8,7 @@ import {
 import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
 import festivalMap from "../../assets/map.png"; // IMG of our map on the map
+import MapButton from "./MapButton";
 
 const Map = () => {
   const { position } = useGeolocation();
@@ -76,8 +77,9 @@ const Map = () => {
   // ----------------------------------------------
   // HERE WE RETURN MAP WITH OUR CUSTOM STYLING
   return (
-    <div className="relative w-full h-[66vh] z-[0]">
-      <div id="map" className="h-full w-full"></div>
+    <div className="relative w-full h-[66vh]">
+      <div id="map" className="absolute z-0 h-full w-full"></div>
+      <MapButton />
     </div>
   );
   //  ----------------------------------------------
