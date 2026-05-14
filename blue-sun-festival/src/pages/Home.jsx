@@ -1,9 +1,9 @@
+import Header from "../components/Header";
+
 const Home = () => {
   return (
     <>
-      <header>
-        <h1 className="text-center text-[#0199D7]">BLÅ SOL</h1>
-      </header>
+      <Header />
       <p>This is home page</p>
     </>
   );

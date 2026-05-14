@@ -1,12 +1,10 @@
+import Header from "../components/Header";
+
 export default function Schedule() {
   return (
     <>
-      <header>
-        <h1 className="text-center text-[#0199D7]">BLÅ SOL</h1>
-      </header>
-      <main>
-        <h2 className="text-[#0199D7]">Schedule</h2>
-      </main>
+      <Header />
+      <h2 className="text-[#0199D7]">This is a schedule page</h2>
     </>
   );
 }
