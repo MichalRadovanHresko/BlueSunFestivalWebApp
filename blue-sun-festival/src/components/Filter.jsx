@@ -9,10 +9,12 @@ const Filter = () => {
     "Help",
   ];
   const newFilterOptions = options.map((opt) => (
-    <li className="px-[32px] mx-[13px] text-[#0199D7]">{opt}</li>
+    <li key={opt} className="text-[black]">
+      {opt}
+    </li>
   ));
   return (
-    <ul className="flex flex-row flex-nowrap justify-center list-none gap-[5px] overflow-hidden">
+    <ul className="pl-[30px] flex flex-row gap-[12vw] justify-start list-none overflow-x-auto">
       {newFilterOptions}
     </ul>
   );

@@ -17,3 +17,9 @@ body {
 h1,h2,h3,h4,h5,h6{
     font-family: 'Bowlby One';
 }
+
+@media (min-width: 768px) {
+  .mt-3pct-md {
+    margin-top: 3%;
+  }
+}
