@@ -4,7 +4,7 @@ export default function Menu() {
   return (
     <>
       <Header />
-      <h2 className="text-[#0199D7]">This is a Menu</h2>
+      <p className="text-center">This is a Menu page</p>
     </>
   );
 }
