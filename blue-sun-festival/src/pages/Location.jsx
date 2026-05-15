@@ -1,6 +1,6 @@
 import Map from "../components/map/Map";
-import Filter from "../components/Filter.jsx";
-import Header from "../components/Header.jsx";
+import Filter from "../components/header/Filter.jsx";
+import Header from "../components/header/Header.jsx";
 
 const Location = () => {
   return (
