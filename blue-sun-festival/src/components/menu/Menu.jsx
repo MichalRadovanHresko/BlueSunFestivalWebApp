@@ -1,21 +1,33 @@
+import Circle from "../icons/Circle";
 import MenuBackground from "./MenuBackground";
-import MenuTickIcon from "./MenuTickIcon";
+import MenuTickIcon from "../icons/MenuTickIcon";
+import ChooseIcon from "./ChooseIcon";
+import Profile from "./Profile";
 
 const Menu = () => {
   const option = ["Edit Account", "My Friends", "Language", "Saved", "Log Out"];
   const showOptions = option.map((opt) => (
     <li
       key={opt}
-      className="pb-[9%] flex flex-row justify-between text-[white]"
+      className="flex flex-row items-center justify-between pb-[9%] text-[white]"
     >
-      {opt}
+      <div className="flex flex-row items-center gap-[20px]">
+        <Circle>
+          <ChooseIcon opt={opt} />
+        </Circle>
+        {opt}
+      </div>
       <MenuTickIcon />
     </li>
   ));
+
   return (
-    <MenuBackground>
-      <ul className="list-none">{showOptions}</ul>
-    </MenuBackground>
+    <>
+      <Profile />
+      <MenuBackground>
+        <ul className="list-none">{showOptions}</ul>
+      </MenuBackground>
+    </>
   );
 };
 

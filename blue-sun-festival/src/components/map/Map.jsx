@@ -21,7 +21,7 @@ const Map = () => {
     const map = L.map("map", {
       attributionControl: false, // Turn off Watermark on right bottom
       zoomControl: false, // Turn off Zoom Buttons + and -
-    }).setView([56.155, 10.207], 16);
+    }).setView([56.15575, 10.21], 16);
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}{r}.png",
       {

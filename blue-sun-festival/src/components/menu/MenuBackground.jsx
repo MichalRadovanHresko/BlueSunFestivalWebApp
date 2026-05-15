@@ -1,6 +1,6 @@
 const MenuBackground = ({ children }) => {
   return (
-    <div className="mx-auto w-full max-w-[430px]">
+    <div className="mx-auto w-full max-w-[430px] mb-[18%] mb-10pct-md">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 430 536"
@@ -13,10 +13,7 @@ const MenuBackground = ({ children }) => {
         />
 
         <foreignObject x="0" y="0" width="430" height="536">
-          <div
-            xmlns="http://www.w3.org/1999/xhtml"
-            className="px-[8%] pt-[15%]"
-          >
+          <div xmlns="http://www.w3.org/1999/xhtml" className="p-[8%]">
             {children}
           </div>
         </foreignObject>

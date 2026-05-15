@@ -5,7 +5,6 @@ export default function Account() {
   return (
     <>
       <AccountHeader />
-      <p className="text-center">This is an Account page</p>
       <Menu />
     </>
   );
