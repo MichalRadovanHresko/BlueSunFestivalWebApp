@@ -1,3 +1,5 @@
+import queue from "../../assets/queue.png";
+
 const MapButton = () => {
   const styling = "absolute bottom-[1%] z-10 m-[2px]";
   return (
@@ -90,6 +92,7 @@ const MapButton = () => {
               stroke="#FFFFFF"
               strokeWidth="2"
             />
+            <image href={queue} x="22" y="18" width="26" height="26" />
           </g>
           <defs>
             <filter

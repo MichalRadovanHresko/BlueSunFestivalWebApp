@@ -9,7 +9,10 @@ const Filter = () => {
     "Help",
   ];
   const newFilterOptions = options.map((opt) => (
-    <li key={opt} className="text-[black] rounded-[5px] bg-[#C7C7C7] px-[20px]">
+    <li
+      key={opt}
+      className="text-[white] rounded-[12px] bg-[#22428F] px-[20px] py-[5px]"
+    >
       {opt}
     </li>
   ));
