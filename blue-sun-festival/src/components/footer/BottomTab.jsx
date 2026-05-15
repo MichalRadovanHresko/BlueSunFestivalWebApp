@@ -22,10 +22,13 @@ const BottomTab = () => {
           xmlns="http://www.w3.org/1999/xhtml"
           className="flex pt-[8%] px-[5%] justify-around text-[#22428F] text-[12px]"
         >
-          <NavLink to="/" className="no-underline ">
+          <NavLink
+            to="/"
+            className="no-underline "
+            onClick={() => handleScheduleClick(0)}
+          >
             <div className="flex flex-col items-center">
               <svg
-                onClick={() => handleScheduleClick(0)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -50,10 +53,13 @@ const BottomTab = () => {
               <span>Home</span>
             </div>
           </NavLink>
-          <NavLink to="/schedule" className="no-underline">
+          <NavLink
+            to="/schedule"
+            className="no-underline"
+            onClick={() => handleScheduleClick(1)}
+          >
             <div className="flex flex-col items-center">
               <svg
-                onClick={() => handleScheduleClick(1)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -76,10 +82,13 @@ const BottomTab = () => {
               <span>Schedule</span>
             </div>
           </NavLink>
-          <NavLink to="/location" className="no-underline">
+          <NavLink
+            to="/location"
+            className="no-underline"
+            onClick={() => handleScheduleClick(2)}
+          >
             <div className="flex flex-col items-center">
               <svg
-                onClick={() => handleScheduleClick(2)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -98,10 +107,13 @@ const BottomTab = () => {
               <span>Map</span>
             </div>
           </NavLink>
-          <NavLink to="/artists" className="no-underline">
+          <NavLink
+            to="/artists"
+            className="no-underline"
+            onClick={() => handleScheduleClick(3)}
+          >
             <div className="flex flex-col items-center">
               <svg
-                onClick={() => handleScheduleClick(3)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -120,10 +132,13 @@ const BottomTab = () => {
               <span>Artists</span>
             </div>
           </NavLink>
-          <NavLink to="/menu" className="no-underline">
+          <NavLink
+            to="/menu"
+            className="no-underline"
+            onClick={() => handleScheduleClick(4)}
+          >
             <div className="flex flex-col items-center">
               <svg
-                onClick={() => handleScheduleClick(4)}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
