@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Header = () => {
@@ -35,11 +36,13 @@ const Header = () => {
             />
           </svg>
         </svg>
-        <img
-          src={logo}
-          alt="Blue Sun Festival logo"
-          className="w-[150px] h-[49px]"
-        />
+        <NavLink to="/home">
+          <img
+            src={logo}
+            alt="Blue Sun Festival logo"
+            className="w-[150px] h-[49px]"
+          />
+        </NavLink>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
