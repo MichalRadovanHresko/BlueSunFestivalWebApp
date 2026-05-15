@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 const Header = () => {
   return (
     <>
-      <header className="flex justify-between mt-[5%] mt-3pct-md mx-[2%]">
+      <header className="flex justify-between mt-[5%] mt-3pct-md mx-[5%]">
         <a href="https://blaasol.dk/billet-2026/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"

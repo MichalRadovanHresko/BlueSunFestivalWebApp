@@ -1,10 +1,12 @@
-import Header from "../components/header/Header.jsx";
+import AccountHeader from "../components/header/AccountHeader.jsx";
+import Menu from "../menu/Menu.jsx";
 
 export default function Account() {
   return (
     <>
-      <Header />
+      <AccountHeader />
       <p className="text-center">This is an Account page</p>
+      <Menu />
     </>
   );
 }

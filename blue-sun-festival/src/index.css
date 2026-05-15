@@ -25,4 +25,10 @@ h1,h2,h3,h4,h5,h6{
   .mt-3pct-md {
     margin-top: 2%;
   }
+  .p-2pct-md {
+    padding: 2%;
+  }
+  .mt-2pct-md {
+    margin-top: 2%;
+  }
 }

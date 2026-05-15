@@ -7,17 +7,16 @@ const BottomTab = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="394"
-      height="90"
       viewBox="0 0 394 90"
+      preserveAspectRatio="xMidYMid meet"
       fill="none"
-      className="fixed bottom-[0px] left-1/2 z-10 h-[90px] w-[394px] -translate-x-1/2"
+      className="fixed bottom-[0px] left-1/2 z-10 w-screen max-w-[435px] -translate-x-1/2"
     >
       <path
         d="M394 90H0V13H19.5L111.5 4L203 9.5L250 4L355.5 7L394 0V90Z"
         fill="#FFACCE"
       />
-      <foreignObject x="0" y="0" width="394" height="90">
+      <foreignObject x="0" y="0" width="100%" height="100%">
         <nav
           xmlns="http://www.w3.org/1999/xhtml"
           className="flex pt-[8%] px-[5%] justify-around text-[#22428F] text-[12px]"
