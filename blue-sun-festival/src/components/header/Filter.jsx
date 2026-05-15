@@ -11,7 +11,7 @@ const Filter = () => {
   const newFilterOptions = options.map((opt) => (
     <li
       key={opt}
-      className="text-[white] rounded-[12px] bg-[#22428F] px-[20px] py-[5px]"
+      className="text-[white] rounded-[12px] bg-[#22428F] px-[30px] py-[5px]"
     >
       {opt}
     </li>
