@@ -6,41 +6,45 @@ import QuestionIcon from "../icons/QuestionIcon";
 import ShowMeIcon from "../icons/ShowMeIcon";
 
 const ChooseIcon = ({ opt }) => {
-  const renderSvg = (IconComponent) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="68"
-      height="68"
-      viewBox="0 0 68 68"
-      fill="none"
-    >
-      <g filter="url(#filter0_d_486_1099)">
-        <circle
-          cx="34"
-          cy="34"
-          r="30"
-          fill="#ffffff"
-          stroke="#FFFFFF"
-          strokeWidth="2"
-        />
-      </g>
-
-      <IconComponent />
-    </svg>
-  );
+  const styling =
+    "bg-white rounded-full h-[60px] w-[60px] flex items-center justify-center";
 
   if (opt === "Edit Account") {
-    return renderSvg(EditAccIcon);
+    return (
+      <div className={`${styling}`}>
+        <EditAccIcon />
+      </div>
+    );
   } else if (opt === "My Friends") {
-    return renderSvg(ShowMeIcon);
+    return (
+      <div className={`${styling}`}>
+        <ShowMeIcon />
+      </div>
+    );
   } else if (opt === "Language") {
-    return renderSvg(LanguageIcon);
+    return (
+      <div className={`${styling}`}>
+        <LanguageIcon />
+      </div>
+    );
   } else if (opt === "Saved") {
-    return renderSvg(HeartIcon);
+    return (
+      <div className={`${styling}`}>
+        <HeartIcon />
+      </div>
+    );
   } else if (opt === "Log Out") {
-    return renderSvg(LogOutIcon);
+    return (
+      <div className={`${styling}`}>
+        <LogOutIcon />
+      </div>
+    );
   } else {
-    return renderSvg(QuestionIcon);
+    return (
+      <div className={`${styling}`}>
+        <QuestionIcon />
+      </div>
+    );
   }
 };
 

@@ -2,8 +2,6 @@ const LogOutIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      y="19"
-      x="19"
       width="30"
       height="30"
       viewBox="0 0 30 30"

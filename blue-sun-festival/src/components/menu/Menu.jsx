@@ -1,4 +1,3 @@
-import Circle from "../icons/Circle";
 import MenuBackground from "./MenuBackground";
 import MenuTickIcon from "../icons/MenuTickIcon";
 import ChooseIcon from "./ChooseIcon";
@@ -11,10 +10,8 @@ const Menu = () => {
       key={opt}
       className="flex flex-row items-center justify-between pb-[9%] text-[white]"
     >
-      <div className="flex flex-row items-center gap-[20px]">
-        <Circle>
-          <ChooseIcon opt={opt} />
-        </Circle>
+      <div className="flex flex-row items-center gap-[20px] bg-[white] rounded-[50%] h-[30px] w-[30px] p-[15px]">
+        <ChooseIcon opt={opt} />
         {opt}
       </div>
       <MenuTickIcon />

@@ -1,7 +1,7 @@
 import queue from "../../assets/queue.png";
 
 const QueueIcon = () => {
-  return <image href={queue} x="22" y="22" width="24" height="24" />;
+  return <img src={queue} width="30" height="30" />;
 };
 
 export default QueueIcon;

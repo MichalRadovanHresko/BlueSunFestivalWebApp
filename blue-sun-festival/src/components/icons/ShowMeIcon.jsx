@@ -2,8 +2,8 @@ const ShowMeIcon = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      x="19"
-      y="19"
+      x="15"
+      y="15"
       width="30"
       height="30"
       viewBox="0 0 30 30"
