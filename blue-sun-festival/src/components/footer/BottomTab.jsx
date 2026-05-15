@@ -22,8 +22,8 @@ const BottomTab = () => {
           xmlns="http://www.w3.org/1999/xhtml"
           className="flex pt-[8%] px-[5%] justify-around text-[#22428F] text-[12px]"
         >
-          <NavLink
-            to="/"
+          <NavLink // Home
+            to="/home"
             className="no-underline "
             onClick={() => handleScheduleClick(0)}
           >
@@ -53,7 +53,8 @@ const BottomTab = () => {
               <span>Home</span>
             </div>
           </NavLink>
-          <NavLink
+
+          <NavLink // Schedule
             to="/schedule"
             className="no-underline"
             onClick={() => handleScheduleClick(1)}
@@ -82,8 +83,9 @@ const BottomTab = () => {
               <span>Schedule</span>
             </div>
           </NavLink>
-          <NavLink
-            to="/location"
+
+          <NavLink // Location
+            to="/"
             className="no-underline"
             onClick={() => handleScheduleClick(2)}
           >
@@ -132,7 +134,8 @@ const BottomTab = () => {
               <span>Artists</span>
             </div>
           </NavLink>
-          <NavLink
+
+          <NavLink // Menu
             to="/menu"
             className="no-underline"
             onClick={() => handleScheduleClick(4)}
