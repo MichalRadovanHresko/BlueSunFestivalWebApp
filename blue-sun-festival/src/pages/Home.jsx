@@ -1,10 +1,17 @@
 import Header from "../components/header/Header.jsx";
+import template from "../assets/templateHome.webp";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <p className="text-center">This is home page</p>
+      <div className="flex items-center justify-center">
+        <img
+          src={template}
+          alt="template-picture"
+          className="w-full max-w-[450px]"
+        />
+      </div>
     </>
   );
 };
