@@ -7,7 +7,7 @@ import ShowMeIcon from "../icons/ShowMeIcon";
 
 const ChooseIcon = ({ opt }) => {
   const styling =
-    "bg-white rounded-full h-[60px] w-[60px] flex items-center justify-center";
+    "bg-white rounded-full h-[40px] w-[40px] flex items-center justify-center";
 
   if (opt === "Edit Account") {
     return (

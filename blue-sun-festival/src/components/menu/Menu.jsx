@@ -10,9 +10,9 @@ const Menu = () => {
       key={opt}
       className="flex flex-row items-center justify-between pb-[9%] text-[white]"
     >
-      <div className="flex flex-row items-center gap-[20px] bg-[white] rounded-[50%] h-[30px] w-[30px] p-[15px]">
+      <div className="flex flex-row items-center gap-[40px] bg-[white] rounded-[50%] h-[30px] w-[30px] p-[15px] whitespace-nowrap">
         <ChooseIcon opt={opt} />
-        {opt}
+        <span className="whitespace-nowrap">{opt}</span>
       </div>
       <MenuTickIcon />
     </li>
