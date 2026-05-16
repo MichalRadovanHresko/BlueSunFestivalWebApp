@@ -3,7 +3,7 @@ import ShowMeIcon from "../icons/ShowMeIcon";
 
 const MapButton = () => {
   const styling =
-    "absolute bottom-[7%] bg-[white] rounded-[50%] h-[30px] w-[30px] p-[15px] z-10 m-[2px]";
+    "absolute bottom-[7%] bg-[white] shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.3)] rounded-[50%] h-[30px] w-[30px] p-[15px] z-10 m-[2px]";
   return (
     <>
       <div className={`${styling} left-[4%]`}>
