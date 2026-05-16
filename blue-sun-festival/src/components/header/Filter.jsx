@@ -1,4 +1,7 @@
+import useFilterColorSwitching from "../../hooks/useFilterColorSwitching";
+
 const Filter = () => {
+  const { handleScheduleClick, getFill } = useFilterColorSwitching();
   const options = [
     "Toilet",
     "Drinks",
@@ -8,10 +11,12 @@ const Filter = () => {
     "Exits",
     "Help",
   ];
-  const newFilterOptions = options.map((opt) => (
+  const newFilterOptions = options.map((opt, i) => (
     <li
       key={opt}
-      className="text-[white] rounded-[12px] bg-[#22428F] px-[30px] py-[5px]"
+      onClick={() => handleScheduleClick(i)}
+      className="text-[white] rounded-[12px] px-[30px] py-[5px]"
+      style={{ backgroundColor: getFill(i) }}
     >
       {opt}
     </li>
