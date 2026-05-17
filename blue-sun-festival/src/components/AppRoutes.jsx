@@ -4,6 +4,7 @@ import Artists from "../pages/Artists.jsx";
 import Schedule from "../pages/Schedule.jsx";
 import Account from "../pages/Account.jsx";
 import Location from "../pages/Location.jsx";
+import EditAccount from "../pages/EditAccount.jsx";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
         <Route path="/artists" element={<Artists />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/account/edit" element={<EditAccount />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </>
