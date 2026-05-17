@@ -1,6 +1,6 @@
 import AccountHero from "../components/editAccount/AccountHero";
 import AccountDetails from "../components/editAccount/AccountDetails";
-import EditAccountHeader from "../components/editAccount/EditAccountHeader";
+import EditAccountHeader from "../components/header/EditAccountHeader";
 
 const EditAccount = () => {
   return (

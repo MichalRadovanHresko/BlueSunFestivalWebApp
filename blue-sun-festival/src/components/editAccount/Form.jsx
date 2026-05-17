@@ -33,7 +33,7 @@ const Form = () => {
 
       <button
         type="button"
-        className="h-[40px] mx-auto max-w-[200px] rounded-[10px] px-[40px] py-[10px] border-0 text-[16px] font-[500] text-[#22428F]"
+        className="h-[40px] mx-auto max-w-[200px] bg-[#C5E3EE] rounded-[10px] px-[40px] py-[10px] border-0 text-[16px] font-[500] text-[#22428F]"
       >
         Save Changes
       </button>
