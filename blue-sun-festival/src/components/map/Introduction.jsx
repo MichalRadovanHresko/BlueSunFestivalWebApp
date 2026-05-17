@@ -25,25 +25,25 @@ const Introduction = () => {
 
         <button
           onClick={() => setOpen(false)}
-          className="text-[#22428F] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[10px]"
+          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
         >
           Explore facilities & stages
         </button>
         <button
           onClick={() => setOpen(false)}
-          className="text-[#22428F] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[10px]"
+          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
         >
           Avoid crowded areas
         </button>
         <button
           onClick={() => setOpen(false)}
-          className="text-[#22428F] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[10px]"
+          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
         >
           Discover new people & social hotspots
         </button>
         <button
           onClick={() => setOpen(false)}
-          className="text-[#22428F] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[10px]"
+          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
         >
           Find your friends
         </button>
