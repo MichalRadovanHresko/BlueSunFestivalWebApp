@@ -21,7 +21,9 @@ const Introduction = () => {
       }}
     >
       <IntroductionPopUp>
-        <h2 className="text-[#FFF] text-center mb-[7%]">YOUR FESTIVAL LIVE!</h2>
+        <h2 className="text-[#FFF] text-center mb-[7%] mt-[0px]">
+          YOUR FESTIVAL LIVE!
+        </h2>
 
         <button
           onClick={() => setOpen(false)}
