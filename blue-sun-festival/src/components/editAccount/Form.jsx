@@ -28,7 +28,7 @@ const Form = () => {
         id="edit-password"
         type="password"
         placeholder="Enter password"
-        className="mb-[10px] h-[40px] w-[90%] rounded-[10px] border-0 bg-[#E1E1E4] px-[18px] text-[20px] text-[#22428F] placeholder:text-[#8B8B8B] placeholder:opacity-100 focus:placeholder-transparent focus:outline-none"
+        className="mb-[20px] h-[40px] w-[90%] rounded-[10px] border-0 bg-[#E1E1E4] px-[18px] text-[20px] text-[#22428F] placeholder:text-[#8B8B8B] placeholder:opacity-100 focus:placeholder-transparent focus:outline-none"
       />
 
       <button

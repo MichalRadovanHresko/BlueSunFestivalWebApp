@@ -1,5 +1,4 @@
 import Form from "./Form";
-import EditDetailsFormBackground from "./FormBackground";
 import Overlay from "./Overlay";
 
 const EditAccountDetails = () => {
@@ -8,9 +7,9 @@ const EditAccountDetails = () => {
       <h2 className="mb-[20px] text-[#FFF] text-center text-[38px] leading-none text-white">
         PERSONAL DETAILS
       </h2>
-      <EditDetailsFormBackground>
+      <div className="px-[16px] py-[4%] flex flex-col content-center">
         <Form />
-      </EditDetailsFormBackground>
+      </div>
     </Overlay>
   );
 };
