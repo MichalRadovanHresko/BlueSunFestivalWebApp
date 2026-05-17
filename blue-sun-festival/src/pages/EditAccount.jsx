@@ -1,11 +1,14 @@
-import AccountHeader from "../components/header/AccountHeader";
+import AccountHero from "../components/editAccount/AccountHero";
+import AccountDetails from "../components/editAccount/AccountDetails";
+import EditAccountHeader from "../components/editAccount/EditAccountHeader";
 
 const EditAccount = () => {
-  // Nicky's page
   return (
-    <>
-      <AccountHeader />
-    </>
+    <main className="mx-auto w-full max-w-[430px]">
+      <EditAccountHeader />
+      <AccountHero />
+      <AccountDetails />
+    </main>
   );
 };
 
