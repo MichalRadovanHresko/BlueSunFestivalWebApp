@@ -3,6 +3,7 @@ import useFilterColorSwitching from "../../hooks/useFilterColorSwitching";
 const Filter = () => {
   const { handleScheduleClick, getFill } = useFilterColorSwitching();
   const options = [
+    "All",
     "Toilet",
     "Drinks",
     "Stage",
