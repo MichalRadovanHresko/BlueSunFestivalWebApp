@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { createLocationIcon } from "./mapIcons"; // OUR CUSTOM ICONS
 import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
 import festivalMap from "../../assets/map.png"; // IMG of our map on the map
 import MapButton from "./MapButton";
 import MapMarkers from "./MapMarkers";
+import { createLocationIcon } from "./mapIcons";
 
 const Map = ({ selectedFilter = "all" }) => {
   // let userIcon = '../assets/default.png'
@@ -81,9 +81,9 @@ const Map = ({ selectedFilter = "all" }) => {
       }
 
       // ADD MARKER TO YOUR CURRENT POSITION
-      markerRef.current = L.marker([lat, lng], { icon: locationIcon }).addTo(
-        mapInstance,
-      );
+      markerRef.current = L.marker([lat, lng], {
+        icon: createLocationIcon(),
+      }).addTo(mapInstance);
     }
   }, [position, mapInstance]);
   // ----------------------------------------------
