@@ -2,6 +2,7 @@ import { renderToString } from "react-dom/server";
 import L from "leaflet";
 import MarkerIcon from "../icons/MarkerIcon";
 import MyLocationIcon from "../icons/MyLocationIcon";
+import InfoIcon from "../icons/InfoIcon";
 
 export const createLocationIcon = ({ name = "ME" } = {}) =>
   L.divIcon({
@@ -62,4 +63,12 @@ export const createAvatarIcon = (avatarPath, name = "") =>
     ),
     iconSize: [81, 90],
     iconAnchor: [40.5, 90],
+  });
+
+export const createInfoIcon = () =>
+  L.divIcon({
+    className: "",
+    html: renderToString(<InfoIcon />),
+    iconSize: [44, 48],
+    iconAnchor: [22, 48],
   });
