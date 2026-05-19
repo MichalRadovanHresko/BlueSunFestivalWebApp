@@ -1,4 +1,4 @@
-import Map from "../../components/map/Map.jsx";
+import Map from "./maps/Map.jsx";
 import Filter from "../../components/header/Filter.jsx";
 import Header from "../../components/header/Header.jsx";
 import useMapFilter from "../../hooks/useMapFilter.jsx";

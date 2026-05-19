@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header.jsx";
-import template from "../../assets/templateHome.webp";
+import template from "../../assets/templates/templateHome.webp";
 
 const Home = () => {
   return (

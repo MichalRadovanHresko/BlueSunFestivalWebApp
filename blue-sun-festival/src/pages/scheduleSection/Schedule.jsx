@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header.jsx";
-import template from "../../assets/templateSchedule.webp";
+import template from "../../assets/templates/templateSchedule.webp";
 
 export default function Schedule() {
   return (

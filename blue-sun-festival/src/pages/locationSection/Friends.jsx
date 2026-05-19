@@ -1,6 +1,6 @@
 import Header from "../../components/header/Header";
 import FriendListNav from "../../components/header/FriendListNav";
-import FriendMap from "../../components/map/friendMap";
+import FriendMap from "./maps/FriendMap";
 
 const Friends = () => {
   return (

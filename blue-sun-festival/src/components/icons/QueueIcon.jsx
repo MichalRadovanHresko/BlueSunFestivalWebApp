@@ -1,4 +1,4 @@
-import queue from "../../assets/queue.png";
+import queue from "../../assets/icons/queue.png";
 
 const QueueIcon = () => {
   return <img src={queue} width="30" height="30" />;

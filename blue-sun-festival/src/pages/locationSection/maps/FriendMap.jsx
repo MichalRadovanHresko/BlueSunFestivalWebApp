@@ -1,8 +1,8 @@
 import L from "leaflet";
-import festivalMap from "../../assets/map.png";
+import festivalMap from "../../../assets/map/map.png";
 import { useEffect, useRef } from "react";
-import { createLocationIcon } from "./mapIcons";
-import MapButton from "./MapButton";
+import { createLocationIcon } from "../../../components/map/mapIcons";
+import MapButton from "../../../components/map/MapButton";
 
 const FriendMap = () => {
   const mapRef = useRef(null);

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import useColorSwitching from "../../hooks/ColorSwitching";
+import useColorSwitching from "../../hooks/useColorSwitching";
 
 const BottomTab = () => {
   const { handleScheduleClick, getFill } = useColorSwitching();

@@ -1,4 +1,4 @@
-import defaultUser from "../../assets/defaultUser.png";
+import defaultUser from "../../assets/user/defaultUser.png";
 import SettingIcon from "../icons/settingIcon";
 
 const Profile = () => {

@@ -1,4 +1,4 @@
-import editIcon from "../../assets/editIcon.png";
+import editIcon from "../../assets/icons/editIcon.png";
 import BackButton from "./BackButton";
 
 const EditAccountHero = () => {

@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
+import useGeolocation from "../../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
-import festivalMap from "../../assets/map.png"; // IMG of our map on the map
-import MapButton from "./MapButton";
-import MapMarkers from "./MapMarkers";
-import { createLocationIcon } from "./mapIcons";
+import festivalMap from "../../../assets/map/map.png"; // IMG of our map on the map
+import MapButton from "../../../components/map/MapButton";
+import MapMarkers from "../../../components/map/MapMarkers";
+import { createLocationIcon } from "../../../components/map/mapIcons";
 
 const Map = ({ selectedFilter = "all" }) => {
   const { position } = useGeolocation();
