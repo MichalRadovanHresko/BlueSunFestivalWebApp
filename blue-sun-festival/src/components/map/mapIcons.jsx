@@ -3,14 +3,14 @@ import L from "leaflet";
 import MarkerIcon from "../icons/MarkerIcon";
 import MyLocationIcon from "../icons/MyLocationIcon";
 
-export const createLocationIcon = () =>
+export const createLocationIcon = ({ name }) =>
   L.divIcon({
     className: "",
     html: renderToString(
       <div className="flex flex-col items-center">
         <MyLocationIcon />
-        <span className="text-[16px] text-[#fff] [text-shadow:0_0_3px_#000,0_0_3px_#000]">
-          ME
+        <span className="text-[16px] text-[#22428F] font-[400] [text-shadow:#FFF]">
+          {name}
         </span>
       </div>,
     ),

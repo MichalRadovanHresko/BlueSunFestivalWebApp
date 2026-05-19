@@ -3,7 +3,7 @@ import HeartIcon from "../icons/HeartIcon";
 import LanguageIcon from "../icons/LanguageIcon";
 import LogOutIcon from "../icons/LogOutIcon";
 import QuestionIcon from "../icons/QuestionIcon";
-import ShowMeIcon from "../icons/ShowMeIcon";
+import FindMyFriendsIcon from "../icons/findMyFriends";
 
 const ChooseIcon = ({ opt }) => {
   const styling =
@@ -18,7 +18,7 @@ const ChooseIcon = ({ opt }) => {
   } else if (opt === "My Friends") {
     return (
       <div className={`${styling}`}>
-        <ShowMeIcon />
+        <FindMyFriendsIcon />
       </div>
     );
   } else if (opt === "Language") {
