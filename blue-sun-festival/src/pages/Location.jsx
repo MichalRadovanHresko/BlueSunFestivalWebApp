@@ -1,16 +1,24 @@
 import Map from "../components/map/Map";
 import Filter from "../components/header/Filter.jsx";
 import Header from "../components/header/Header.jsx";
-import Introduction from "../components/map/Introduction.jsx";
+import useMapFilter from "../hooks/useMapFilter";
 
 const Location = () => {
+  const { selectedFilter, handleFilterChange, filterOptions, getFill } =
+    useMapFilter();
+
   return (
     <>
       <Header />
-      <Filter />
-      <Introduction />
+      <Filter
+        selectedFilter={selectedFilter}
+        onFilterChange={handleFilterChange}
+        filterOptions={filterOptions}
+        getFill={getFill}
+      />
+      {/* <Introduction /> */}
       <section id="map-section">
-        <Map />
+        <Map selectedFilter={selectedFilter} />
       </section>
     </>
   );

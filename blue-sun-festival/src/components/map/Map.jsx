@@ -1,19 +1,35 @@
-import { useEffect, useRef } from "react";
-import { createLocationIcon, createMarkerIcon } from "./mapIcons"; // OUR CUSTOM ICONS
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createLocationIcon } from "./mapIcons"; // OUR CUSTOM ICONS
 import useGeolocation from "../../hooks/useGeolocation"; // OUR LIVE LOCATION
 import L from "leaflet"; // METHOD FROM OUR MAP LIBRARY THAT I FOUND ON NPM
 import festivalMap from "../../assets/map.png"; // IMG of our map on the map
 import MapButton from "./MapButton";
+import MapMarkers from "./MapMarkers";
 
-const Map = () => {
+const Map = ({ selectedFilter = "all" }) => {
+  // let userIcon = '../assets/default.png'
   const { position } = useGeolocation();
-  const mapRef = useRef(null);
+  const [mapInstance, setMapInstance] = useState(null);
   const markerRef = useRef(null);
+  const mapRef = useRef(null);
 
-  useEffect(() => {
-    // MAP SETTINGS
+  const mapContainerRef = useCallback((node) => {
+    if (!node) {
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
+      setMapInstance(null);
+      return;
+    }
+
+    if (mapRef.current) {
+      return;
+    }
+
+    // MAP SETTINGSS
     // ----------------------------------------------
-    const map = L.map("map", {
+    const map = L.map(node, {
       attributionControl: false, // Turn off Watermark on right bottom
       zoomControl: false, // Turn off Zoom Buttons + and -
       maxBoundsViscosity: 1.0, // Makes bounds solid = can't drag outside #great
@@ -25,7 +41,6 @@ const Map = () => {
         minZoom: 17,
       },
     ).addTo(map);
-    mapRef.current = map; // this need explanation
 
     // ----------------------------------------------
     // MAP IMAGE THAT WE ARE PUTTING ON THE REAL MAP
@@ -37,16 +52,19 @@ const Map = () => {
     L.imageOverlay(festivalMap, festivalBounds, {}).addTo(map);
     map.setMaxBounds(festivalBounds);
 
-    // ----------------------------------------------
+    mapRef.current = map;
+    setMapInstance(map);
+  }, []);
 
-    // MARKER SECTION (SHOWS CUSTOM MARKERS ON OUR MAP)
-    L.marker([56.12032, 10.158863], { icon: createMarkerIcon() }).addTo(map);
-    L.marker([56.120483, 10.160338], { icon: createMarkerIcon() }).addTo(map);
-    L.marker([56.119287, 10.158926], { icon: createMarkerIcon() }).addTo(map);
-    // -------------------------------------------------
-
+  useEffect(() => {
     return () => {
-      map.remove();
+      if (markerRef.current && mapRef.current) {
+        mapRef.current.removeLayer(markerRef.current);
+      }
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
     };
   }, []);
   //  ----------------------------------------------
@@ -54,20 +72,20 @@ const Map = () => {
   // MARKER SECTION (IT SHOWS YOUR LOCATION)
   // ----------------------------------------------
   useEffect(() => {
-    if (position && mapRef.current) {
+    if (position && mapInstance) {
       const { lat, lng } = position;
 
       // REMOVES OLD MARKER (if exist)
       if (markerRef.current) {
-        mapRef.current.removeLayer(markerRef.current);
+        mapInstance.removeLayer(markerRef.current);
       }
 
       // ADD MARKER TO YOUR CURRENT POSITION
-      markerRef.current = L.marker([lat, lng], {
-        icon: createLocationIcon(),
-      }).addTo(mapRef.current);
+      markerRef.current = L.marker([lat, lng], { icon: locationIcon }).addTo(
+        mapInstance,
+      );
     }
-  }, [position]);
+  }, [position, mapInstance]);
   // ----------------------------------------------
 
   // RETURN SECTION
@@ -75,7 +93,8 @@ const Map = () => {
   // HERE WE RETURN MAP WITH OUR CUSTOM STYLING
   return (
     <div className="relative w-full h-[66vh]">
-      <div id="map" className="absolute z-0 h-full w-full"></div>
+      <div ref={mapContainerRef} className="absolute z-0 h-full w-full"></div>
+      <MapMarkers map={mapInstance} selectedFilter={selectedFilter} />
       <MapButton />
     </div>
   );
