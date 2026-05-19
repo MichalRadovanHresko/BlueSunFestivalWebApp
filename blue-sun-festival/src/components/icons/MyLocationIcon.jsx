@@ -1,3 +1,7 @@
+import defaultUser from "../../assets/defaultUser.png";
+
+const avatar = defaultUser;
+
 const MyLocationIcon = () => {
   return (
     <svg
@@ -10,6 +14,18 @@ const MyLocationIcon = () => {
       <path
         d="M52.5063 78.0568C52.5063 78.0568 44.2063 85.1568 41.0063 89.5568C37.5064 85.0568 28.5064 78.0568 28.5064 78.0568C28.5064 78.0568 -0.493592 68.5568 0.00639157 42.0568C0.506375 15.5568 18.8393 -1.10156 42.0063 0.0567562C64.0977 1.16129 78.5064 18.0568 80.0064 42.0568C81.5064 66.0568 52.5063 78.0568 52.5063 78.0568Z"
         fill="#22428F"
+      />
+      <clipPath id="avatarClip">
+        <circle cx="40.5" cy="38" r="24" />
+      </clipPath>
+      <image
+        href={avatar}
+        x="16.5"
+        y="14"
+        width="48"
+        height="48"
+        clipPath="url(#avatarClip)"
+        preserveAspectRatio="xMidYMid slice"
       />
     </svg>
   );

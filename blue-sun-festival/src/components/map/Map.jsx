@@ -6,7 +6,6 @@ import festivalMap from "../../assets/map.png"; // IMG of our map on the map
 import MapButton from "./MapButton";
 
 const Map = () => {
-  // let userIcon = '../assets/default.png'
   const { position } = useGeolocation();
   const mapRef = useRef(null);
   const markerRef = useRef(null);
@@ -54,12 +53,9 @@ const Map = () => {
 
   // MARKER SECTION (IT SHOWS YOUR LOCATION)
   // ----------------------------------------------
-  // Add marker when position updates
   useEffect(() => {
     if (position && mapRef.current) {
       const { lat, lng } = position;
-
-      const locationIcon = createLocationIcon();
 
       // REMOVES OLD MARKER (if exist)
       if (markerRef.current) {
@@ -67,9 +63,9 @@ const Map = () => {
       }
 
       // ADD MARKER TO YOUR CURRENT POSITION
-      markerRef.current = L.marker([lat, lng], { icon: locationIcon }).addTo(
-        mapRef.current,
-      );
+      markerRef.current = L.marker([lat, lng], {
+        icon: createLocationIcon(),
+      }).addTo(mapRef.current);
     }
   }, [position]);
   // ----------------------------------------------
