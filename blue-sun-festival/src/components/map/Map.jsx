@@ -12,7 +12,7 @@ const Map = () => {
   const markerRef = useRef(null);
 
   useEffect(() => {
-    // MAP SETTINGS
+    // MAP SETTINGSS
     // ----------------------------------------------
     const map = L.map("map", {
       attributionControl: false, // Turn off Watermark on right bottom
