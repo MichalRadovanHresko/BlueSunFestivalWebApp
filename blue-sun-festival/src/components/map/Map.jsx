@@ -41,7 +41,9 @@ const Map = () => {
     // ----------------------------------------------
 
     // MARKER SECTION (SHOWS CUSTOM MARKERS ON OUR MAP)
-    L.marker([56.12032, 10.158863], { icon: createMarkerIcon() }).addTo(map);
+    L.marker([56.11990, 10.158893], { icon: createMarkerIcon() }).addTo(map);//stage
+    L.marker([56.12200, 10.160603], { icon: createMarkerIcon() }).addTo(map);//stage
+    L.marker([56.12285, 10.161303], { icon: createMarkerIcon() }).addTo(map);//stage
     L.marker([56.120483, 10.160338], { icon: createMarkerIcon() }).addTo(map);
     L.marker([56.119287, 10.158926], { icon: createMarkerIcon() }).addTo(map);
     // -------------------------------------------------
