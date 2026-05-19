@@ -3,7 +3,7 @@ import L from "leaflet";
 import MarkerIcon from "../icons/MarkerIcon";
 import MyLocationIcon from "../icons/MyLocationIcon";
 
-export const createLocationIcon = ({ name }) =>
+export const createLocationIcon = ({ name = "ME" } = {}) =>
   L.divIcon({
     className: "",
     html: renderToString(

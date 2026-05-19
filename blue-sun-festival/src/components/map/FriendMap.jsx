@@ -2,6 +2,7 @@ import L from "leaflet";
 import festivalMap from "../../assets/map.png";
 import { useEffect, useRef } from "react";
 import { createLocationIcon } from "./mapIcons";
+import MapButton from "./MapButton";
 
 const FriendMap = () => {
   const mapRef = useRef(null);
@@ -46,6 +47,7 @@ const FriendMap = () => {
   return (
     <div className="relative w-full h-[66vh]">
       <div id="map-friends" className="absolute z-0 h-full w-full"></div>
+      <MapButton />
     </div>
   );
 };
