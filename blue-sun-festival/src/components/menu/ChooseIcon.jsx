@@ -3,7 +3,7 @@ import HeartIcon from "../icons/HeartIcon";
 import LanguageIcon from "../icons/LanguageIcon";
 import LogOutIcon from "../icons/LogOutIcon";
 import QuestionIcon from "../icons/QuestionIcon";
-import FindMyFriendsIcon from "../icons/findMyFriends";
+import FindMyFriendsIcon from "../icons/FindMyFriends";
 
 const ChooseIcon = ({ opt }) => {
   const styling =

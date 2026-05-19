@@ -1,5 +1,5 @@
-import Header from "../components/header/Header.jsx";
-import template from "../assets/templateArtist.png";
+import Header from "../../components/header/Header.jsx";
+import template from "../../assets/templateArtist.png";
 
 export default function Artists() {
   return (

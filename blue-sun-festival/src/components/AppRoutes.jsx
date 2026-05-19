@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home.jsx";
-import Artists from "../pages/Artists.jsx";
-import Schedule from "../pages/Schedule.jsx";
-import Account from "../pages/Account.jsx";
-import Location from "../pages/Location.jsx";
-import EditAccount from "../pages/EditAccount.jsx";
-import Friends from "../pages/Friends.jsx";
+import Home from "../pages/homeSection/Home.jsx";
+import Artists from "../pages/artistSection/Artists.jsx";
+import Schedule from "../pages/scheduleSection/Schedule.jsx";
+import Account from "../pages/accountSection/Account.jsx";
+import Location from "../pages/locationSection/Location.jsx";
+import EditAccount from "../pages/accountSection/EditAccount.jsx";
+import Friends from "../pages/locationSection/Friends.jsx";
+import CrowdDensity from "../pages/locationSection/CrowdDensity.jsx";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +14,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Location />} />
         <Route path="/friends" element={<Friends />} />
+        <Route path="/crowd/density" element={<CrowdDensity />} />
         <Route path="/artists" element={<Artists />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/account" element={<Account />} />

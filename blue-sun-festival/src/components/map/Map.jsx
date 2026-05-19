@@ -7,7 +7,6 @@ import MapMarkers from "./MapMarkers";
 import { createLocationIcon } from "./mapIcons";
 
 const Map = ({ selectedFilter = "all" }) => {
-  // let userIcon = '../assets/default.png'
   const { position } = useGeolocation();
   const [mapInstance, setMapInstance] = useState(null);
   const markerRef = useRef(null);
@@ -22,11 +21,9 @@ const Map = ({ selectedFilter = "all" }) => {
       setMapInstance(null);
       return;
     }
-
     if (mapRef.current) {
       return;
     }
-
     // MAP SETTINGSS
     // ----------------------------------------------
     const map = L.map(node, {

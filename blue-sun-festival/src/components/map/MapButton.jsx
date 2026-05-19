@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import QueueIcon from "../icons/QueueIcon";
-import FindMyFriendsIcon from "../icons/findMyFriends";
+import FindMyFriendsIcon from "../icons/FindMyFriends";
 
 const MapButton = () => {
   const styling =
@@ -12,9 +12,11 @@ const MapButton = () => {
           <FindMyFriendsIcon />
         </div>
       </NavLink>
-      <div className={`${styling} right-[4%]`}>
-        <QueueIcon />
-      </div>
+      <NavLink to="/crowd/density">
+        <div className={`${styling} right-[4%]`}>
+          <QueueIcon />
+        </div>
+      </NavLink>
     </>
   );
 };
