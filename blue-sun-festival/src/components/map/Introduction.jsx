@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import IntroductionPopUp from "./IntroductionPopUp";
+import IntroductionPopUp from "./PopUpLayout";
 import ChooseIcon from "../menu/ChooseIcon";
 
 const Introduction = () => {
@@ -21,7 +21,7 @@ const Introduction = () => {
         maxWidth: "430px",
       }}
     >
-      <IntroductionPopUp>
+      <IntroductionPopUp onClose={() => setOpen(false)}>
         <h2 className="text-[#FFF] text-center mb-[7%] mt-[0px]">
           YOUR FESTIVAL LIVE!
         </h2>

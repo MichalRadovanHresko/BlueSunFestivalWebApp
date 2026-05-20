@@ -7,6 +7,7 @@ import Location from "../pages/locationSection/Location.jsx";
 import EditAccount from "../pages/accountSection/EditAccount.jsx";
 import Friends from "../pages/locationSection/Friends.jsx";
 import CrowdDensity from "../pages/locationSection/CrowdDensity.jsx";
+import Discover from "../pages/locationSection/Discover.jsx";
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Location />} />
         <Route path="/friends" element={<Friends />} />
         <Route path="/crowd/density" element={<CrowdDensity />} />
+        <Route path="/friends/discover" element={<Discover />} />
         <Route path="/artists" element={<Artists />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/account" element={<Account />} />
