@@ -2,6 +2,7 @@ import { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import IntroductionPopUp from "./IntroductionPopUp";
+import ChooseIcon from "../menu/ChooseIcon";
 
 const Introduction = () => {
   const [open, setOpen] = useState(true);
@@ -24,31 +25,42 @@ const Introduction = () => {
         <h2 className="text-[#FFF] text-center mb-[7%] mt-[0px]">
           YOUR FESTIVAL LIVE!
         </h2>
-
-        <button
-          onClick={() => setOpen(false)}
-          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
-        >
-          Explore facilities & stages
-        </button>
-        <button
-          onClick={() => setOpen(false)}
-          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
-        >
-          Avoid crowded areas
-        </button>
-        <button
-          onClick={() => setOpen(false)}
-          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
-        >
-          Discover new people & social hotspots
-        </button>
-        <button
-          onClick={() => setOpen(false)}
-          className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
-        >
-          Find your friends
-        </button>
+        <div className="flex flex-row">
+          <ChooseIcon opt={"Location"} />
+          <button
+            onClick={() => setOpen(false)}
+            className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
+          >
+            Explore facilities & stages
+          </button>
+        </div>
+        <div className="flex flex-row">
+          <ChooseIcon opt={"Queue"} />
+          <button
+            onClick={() => setOpen(false)}
+            className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
+          >
+            Avoid crowded areas
+          </button>
+        </div>
+        <div className="flex flex-row">
+          <ChooseIcon opt={"My Friends"} />
+          <button
+            onClick={() => setOpen(false)}
+            className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
+          >
+            Discover new people & social hotspots
+          </button>
+        </div>
+        <div className="flex flex-row">
+          <ChooseIcon opt={"New Friend"} />
+          <button
+            onClick={() => setOpen(false)}
+            className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
+          >
+            Find your friends
+          </button>
+        </div>
       </IntroductionPopUp>
     </Popup>
   );

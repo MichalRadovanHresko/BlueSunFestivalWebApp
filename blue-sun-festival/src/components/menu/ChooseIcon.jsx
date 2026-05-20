@@ -4,6 +4,9 @@ import LanguageIcon from "../icons/LanguageIcon";
 import LogOutIcon from "../icons/LogOutIcon";
 import QuestionIcon from "../icons/QuestionIcon";
 import FindMyFriendsIcon from "../icons/FindMyFriends";
+import LocationIcon from "../icons/LocationIcon";
+import QueueIcon from "../icons/QueueIcon";
+import NewFriendIcon from "../icons/NewFriendIcon";
 
 const ChooseIcon = ({ opt }) => {
   const styling =
@@ -11,37 +14,55 @@ const ChooseIcon = ({ opt }) => {
 
   if (opt === "Edit Account") {
     return (
-      <div className={`${styling}`}>
+      <div className={styling}>
         <EditAccIcon />
       </div>
     );
   } else if (opt === "My Friends") {
     return (
-      <div className={`${styling}`}>
+      <div className={styling}>
         <FindMyFriendsIcon />
       </div>
     );
   } else if (opt === "Language") {
     return (
-      <div className={`${styling}`}>
+      <div className={styling}>
         <LanguageIcon />
       </div>
     );
   } else if (opt === "Saved") {
     return (
-      <div className={`${styling}`}>
+      <div className={styling}>
         <HeartIcon />
       </div>
     );
   } else if (opt === "Log Out") {
     return (
-      <div className={`${styling}`}>
+      <div className={styling}>
         <LogOutIcon />
+      </div>
+    );
+  } else if (opt === "Location") {
+    return (
+      <div className={styling}>
+        <LocationIcon />
+      </div>
+    );
+  } else if (opt === "Queue") {
+    return (
+      <div className={styling}>
+        <QueueIcon />
+      </div>
+    );
+  } else if (opt === "New Friend") {
+    return (
+      <div className={styling}>
+        <NewFriendIcon />
       </div>
     );
   } else {
     return (
-      <div className={`${styling}`}>
+      <div className={styling}>
         <QuestionIcon />
       </div>
     );

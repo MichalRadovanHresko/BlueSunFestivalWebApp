@@ -10,7 +10,7 @@ const Filter = ({ onFilterChange, filterOptions, getFill }) => {
     </li>
   ));
   return (
-    <ul className="pl-[30px] flex flex-row gap-[4vw] justify-start list-none overflow-x-auto">
+    <ul className="pl-[30px] flex flex-row rounded-[10px] gap-[4vw] justify-start list-none overflow-x-auto">
       {newFilterOptions}
     </ul>
   );
