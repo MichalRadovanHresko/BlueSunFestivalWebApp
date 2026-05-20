@@ -2,7 +2,10 @@ import { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import IntroductionPopUp from "./PopUpLayout";
-import ChooseIcon from "../../menu/ChooseIcon";
+import QueueIcon from "../../icons/QueueIcon";
+import LocationIcon from "../../icons/LocationIcon";
+import FindMyFriendsIcon from "../../icons/FindMyFriends";
+import NewFriendIcon from "../../icons/NewFriendIcon";
 
 const Introduction = () => {
   const [open, setOpen] = useState(true);
@@ -22,11 +25,9 @@ const Introduction = () => {
       }}
     >
       <IntroductionPopUp onClose={() => setOpen(false)}>
-        <h2 className="text-[#FFF] text-center mb-[7%] mt-[0px]">
-          YOUR FESTIVAL LIVE!
-        </h2>
+        <h2 className="text-[#FFF] text-center mb-[7%]">YOUR FESTIVAL LIVE!</h2>
         <div className="flex flex-row">
-          <ChooseIcon opt={"Location"} />
+          <LocationIcon />
           <button
             onClick={() => setOpen(false)}
             className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
@@ -35,7 +36,7 @@ const Introduction = () => {
           </button>
         </div>
         <div className="flex flex-row">
-          <ChooseIcon opt={"Queue"} />
+          <QueueIcon />
           <button
             onClick={() => setOpen(false)}
             className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
@@ -44,7 +45,7 @@ const Introduction = () => {
           </button>
         </div>
         <div className="flex flex-row">
-          <ChooseIcon opt={"My Friends"} />
+          <FindMyFriendsIcon />
           <button
             onClick={() => setOpen(false)}
             className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"
@@ -53,7 +54,7 @@ const Introduction = () => {
           </button>
         </div>
         <div className="flex flex-row">
-          <ChooseIcon opt={"New Friend"} />
+          <NewFriendIcon />
           <button
             onClick={() => setOpen(false)}
             className="text-[#22428F] text-[16px] w-full bg-[#C5E3EE] px-[5%] py-[3%] rounded-[10px] border-[0px] mb-[7px]"

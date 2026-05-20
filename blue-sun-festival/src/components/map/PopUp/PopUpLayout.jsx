@@ -50,16 +50,26 @@ const IntroductionPopUp = ({ children, onClose }) => {
           />
         </filter>
       </defs>
-      <foreignObject x="20" y="15" width="293" height="330">
+      <foreignObject
+        x="0"
+        y="0"
+        width="333"
+        height="376"
+        style={{ overflow: "visible", pointerEvents: "none" }}
+      >
         <div
           xmlns="http://www.w3.org/1999/xhtml"
-          className="p-[8%]"
-          style={{ position: "relative" }}
+          className="p-[6%] mt-[5%]"
+          style={{
+            position: "relative",
+            overflow: "visible",
+            pointerEvents: "auto",
+          }}
         >
           {onClose && (
             <div
               onClick={onClose}
-              className="absolute top-[3%] right-[1%] w-[28px] h-[28px] rounded-[50%] bg-[white] flex items-center justify-center cursor-pointer"
+              className="absolute top-[-2%] right-[3%] w-[28px] h-[28px] rounded-[50%] bg-[white] flex items-center justify-center cursor-pointer"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

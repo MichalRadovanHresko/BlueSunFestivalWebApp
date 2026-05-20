@@ -10,7 +10,7 @@ const Profile = () => {
         className="mb-[10px]"
       />
       <p className="text-[20px] text-[#22428F] whitespace-nowrap">Ida Jensen</p>{" "}
-      <div className="absolute top-[-1%] right-[-65%] shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.3)] flex flex-row items-center bg-[white] rounded-[50%] h-[30px] w-[30px] p-[15px]">
+      <div className="absolute top-[-1%] right-[-65%] shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.3)] flex flex-row items-center bg-[white] rounded-[50%] h-[25px] w-[25px] p-[15px]">
         <SettingIcon />
       </div>
     </div>
