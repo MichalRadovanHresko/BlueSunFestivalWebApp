@@ -1,7 +1,7 @@
 import useMap from "../../../hooks/useMap";
 import useLocationMarker from "../../../hooks/useLocationMarker";
 import festivalMap from "../../../assets/map/map.png";
-import AddPhotoButton from "../../../components/map/AddPhotoButton";
+import AddPhotoButton from "../../../components/map/buttons/AddPhotoButton";
 import { useEffect } from "react";
 import { createAvatarIcon } from "../../../components/map/mapIcons";
 import L from "leaflet";

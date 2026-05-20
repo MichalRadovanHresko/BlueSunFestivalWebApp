@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import QueueIcon from "../icons/QueueIcon";
-import FindMyFriendsIcon from "../icons/FindMyFriends";
+import QueueIcon from "../../icons/QueueIcon";
+import FindMyFriendsIcon from "../../icons/FindMyFriends";
 
 const MapButton = () => {
   const styling =

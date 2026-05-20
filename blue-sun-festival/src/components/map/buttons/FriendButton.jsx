@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import QueueIcon from "../icons/QueueIcon";
-import LocationIcon from "../icons/LocationIcon";
+import QueueIcon from "../../icons/QueueIcon";
+import LocationIcon from "../../icons/LocationIcon";
 import DiscoverButton from "./DiscoverButton";
 const FriendButton = () => {
   const sideBtn =

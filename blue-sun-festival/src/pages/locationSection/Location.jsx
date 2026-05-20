@@ -2,7 +2,7 @@ import Map from "./maps/Map.jsx";
 import Filter from "../../components/header/Filter.jsx";
 import Header from "../../components/header/Header.jsx";
 import useMapFilter from "../../hooks/useMapFilter.jsx";
-import Introduction from "../../components/map/IntroductionPopUp.jsx";
+import Introduction from "../../components/map/PopUp/IntroductionPopUp.jsx";
 
 const Location = () => {
   const { selectedFilter, handleFilterChange, filterOptions, getFill } =

@@ -3,7 +3,7 @@ import L from "leaflet";
 import useMap from "../../../hooks/useMap";
 import useLocationMarker from "../../../hooks/useLocationMarker";
 import crowdMap from "../../../assets/map/crowdmap.png";
-import MapButton from "../../../components/map/MapButton";
+import MapButton from "../../../components/map/buttons/MapButton";
 import { createInfoIcon } from "../../../components/map/mapIcons";
 
 const CrowdDensityMap = () => {

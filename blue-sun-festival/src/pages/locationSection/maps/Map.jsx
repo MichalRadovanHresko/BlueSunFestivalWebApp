@@ -1,7 +1,7 @@
 import useMap from "../../../hooks/useMap";
 import useLocationMarker from "../../../hooks/useLocationMarker";
 import festivalMap from "../../../assets/map/map.png";
-import MapButton from "../../../components/map/MapButton";
+import MapButton from "../../../components/map/buttons/MapButton";
 import MapMarkers from "../../../components/map/MapMarkers";
 
 const Map = ({ selectedFilter = "all" }) => {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import IntroductionPopUp from "./PopUpLayout";
-import ChooseIcon from "../menu/ChooseIcon";
+import ChooseIcon from "../../menu/ChooseIcon";
 
 const Introduction = () => {
   const [open, setOpen] = useState(true);

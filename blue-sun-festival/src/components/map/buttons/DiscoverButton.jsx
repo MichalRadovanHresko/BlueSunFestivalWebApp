@@ -1,4 +1,4 @@
-import Discover from "../../assets/icons/discoverIcon.svg";
+import Discover from "../../../assets/icons/discoverIcon.svg";
 
 const DiscoverButton = () => {
   return (

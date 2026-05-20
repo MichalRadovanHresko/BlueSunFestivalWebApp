@@ -3,10 +3,10 @@ import L from "leaflet";
 import useMap from "../../../hooks/useMap";
 import festivalMap from "../../../assets/map/map.png";
 import { createAvatarIcon } from "../../../components/map/mapIcons";
-import avatar1 from "../../../assets/editAccountIcons/icon.png";
-import avatar3 from "../../../assets/editAccountIcons/icon3.png";
-import avatar4 from "../../../assets/editAccountIcons/icon4.png";
-import FriendButton from "../../../components/map/FriendButton";
+import avatar1 from "../../../assets/editAccountIcons/icon2.png";
+import avatar2 from "../../../assets/editAccountIcons/icon3.png";
+import avatar3 from "../../../assets/editAccountIcons/icon4.png";
+import FriendButton from "../../../components/map/buttons/FriendButton";
 
 const FriendMap = () => {
   const { mapContainerRef, mapInstance } = useMap(festivalMap);
@@ -17,10 +17,10 @@ const FriendMap = () => {
       icon: createAvatarIcon(avatar1, "NINA"),
     }).addTo(mapInstance);
     L.marker([56.121, 10.159], {
-      icon: createAvatarIcon(avatar3, "ANN"),
+      icon: createAvatarIcon(avatar2, "ANN"),
     }).addTo(mapInstance);
     L.marker([56.122, 10.15895], {
-      icon: createAvatarIcon(avatar4, "IVAN"),
+      icon: createAvatarIcon(avatar3, "IVAN"),
     }).addTo(mapInstance);
   }, [mapInstance]);
 

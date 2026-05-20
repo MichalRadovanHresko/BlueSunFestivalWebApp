@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Header from "../../components/header/Header";
 import BackButtonIcon from "../../components/icons/BackButtonIcon";
 import DiscoverMap from "./maps/DiscoverMap";
-import DiscoverPopUp from "../../components/map/DiscoverPopUp";
+import DiscoverPopUp from "../../components/map/PopUp/DiscoverPopUp";
 
 const Discover = () => {
   return (

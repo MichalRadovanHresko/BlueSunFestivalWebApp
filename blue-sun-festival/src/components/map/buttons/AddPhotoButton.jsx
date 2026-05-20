@@ -1,4 +1,4 @@
-import PhotoIcon from "../icons/PhotoIcon";
+import PhotoIcon from "../../icons/PhotoIcon";
 
 const AddPhotoButton = () => {
   return (
