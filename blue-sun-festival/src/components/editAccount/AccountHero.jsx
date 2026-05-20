@@ -1,11 +1,13 @@
 import { useState } from "react";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
 import editIcon from "../../assets/icons/editIcon.png";
 import BackButton from "./BackButton";
+import AvatarPopUp from "./AvatarPopUp";
 
 const EditAccountHero = () => {
   const [openImagePopup, setOpenImagePopup] = useState(false);
+  const [avatar, setAvatar] = useState(
+    localStorage.getItem("userAvatar") || editIcon,
+  );
 
   return (
     <section className="relative px-[7%]">
@@ -15,7 +17,7 @@ const EditAccountHero = () => {
       </div>
       <div className="flex flex-col items-center text-[#22428F]">
         <img
-          src={editIcon}
+          src={avatar}
           alt="profile-image"
           className="h-[150px] w-[150px] mb-[10px] cursor-pointer"
           onClick={() => setOpenImagePopup(true)}
@@ -26,22 +28,13 @@ const EditAccountHero = () => {
         </p>
       </div>
 
-      <Popup
+      <AvatarPopUp
         open={openImagePopup}
-        modal
-        onClose={() => setOpenImagePopup(false)}
-        overlayStyle={{ background: "rgba(0,0,0,0.5)" }}
-        contentStyle={{
-          background: "white",
-          border: "none",
-          padding: "20px",
-          width: "80%",
-          height: "70%",
-          borderRadius: "10px",
+        onClose={() => {
+          setOpenImagePopup(false);
+          setAvatar(localStorage.getItem("userAvatar") || editIcon);
         }}
-      >
-        <div></div>
-      </Popup>
+      />
     </section>
   );
 };
