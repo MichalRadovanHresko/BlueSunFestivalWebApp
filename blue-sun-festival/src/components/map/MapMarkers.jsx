@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { markerData } from "./markers/markerData";
 import { createLayerFromMarkers } from "./markers/createLayerFromMarkers";
-import MarkerBottomPopup from "./popups/MarkerBottomPopup";
+import MarkerBottomPopup from "./PopUp/markersPopUps/MarkerBottomPopup";
 
 const MapMarkers = ({ map, selectedFilter = "all" }) => {
   const markerLayersRef = useRef({ toilets: null, stages: null, drinks: null });

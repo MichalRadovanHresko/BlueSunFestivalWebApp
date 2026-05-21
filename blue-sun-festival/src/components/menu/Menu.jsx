@@ -22,7 +22,7 @@ const Menu = () => {
               <MenuTickIcon />
             </li>
           </NavLink>
-          <NavLink to="/account/friends">
+          <NavLink to="/account/friends" className="no-underline">
             <li
               key={"My Friends"}
               className="flex flex-row items-center justify-between pb-[9%] text-[white]"
@@ -54,7 +54,7 @@ const Menu = () => {
             </div>
             <MenuTickIcon />
           </li>
-          <NavLink to="/">
+          <NavLink to="/" className="no-underline">
             <li
               key={"Log Out"}
               className="flex flex-row items-center justify-between pb-[9%] text-[white]"
