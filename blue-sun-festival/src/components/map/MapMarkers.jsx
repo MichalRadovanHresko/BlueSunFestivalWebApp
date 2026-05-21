@@ -15,14 +15,17 @@ const MapMarkers = ({ map, selectedFilter = "all" }) => {
     const stagesLayer = createLayerFromMarkers(
       markerData.stages,
       setActiveMarker,
+      "stages",
     ).addTo(map);
     const drinksLayer = createLayerFromMarkers(
       markerData.drinks,
       setActiveMarker,
+      "drinks",
     ).addTo(map);
     const toiletsLayer = createLayerFromMarkers(
       markerData.toilets,
       setActiveMarker,
+      "toilets",
     ).addTo(map);
 
     markerLayersRef.current = {

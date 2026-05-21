@@ -1,8 +1,33 @@
 import { renderToString } from "react-dom/server";
 import L from "leaflet";
-import MarkerIcon from "../icons/MarkerIcon";
 import MyLocationIcon from "../icons/MyLocationIcon";
 import InfoIcon from "../icons/InfoIcon";
+import toiletMarker from "../../assets/icons/toilet_marker.png";
+import stageMarker from "../../assets/icons/stage_marker.png";
+import drinksMarker from "../../assets/icons/drinks_marker.png";
+
+const markerIcons = {
+  toilets: {
+    url: toiletMarker,
+    size: [33, 44],
+    anchor: [16, 44],
+  },
+  stages: {
+    url: stageMarker,
+    size: [36, 48],
+    anchor: [18, 48],
+  },
+  drinks: {
+    url: drinksMarker,
+    size: [36, 48],
+    anchor: [18, 48],
+  },
+  default: {
+    url: toiletMarker,
+    size: [33, 44],
+    anchor: [16, 44],
+  },
+};
 
 export const createLocationIcon = ({ name = "ME" } = {}) =>
   L.divIcon({
@@ -19,12 +44,12 @@ export const createLocationIcon = ({ name = "ME" } = {}) =>
     iconAnchor: [20, 52],
   });
 
-export const createMarkerIcon = () =>
-  L.divIcon({
-    className: "",
-    html: renderToString(<MarkerIcon />),
-    iconSize: [26, 35],
-    iconAnchor: [13, 35],
+export const createMarkerIcon = (type = "default") =>
+  L.icon({
+    iconUrl: markerIcons[type]?.url ?? markerIcons.default.url,
+    iconSize: markerIcons[type]?.size ?? markerIcons.default.size,
+    iconAnchor: markerIcons[type]?.anchor ?? markerIcons.default.anchor,
+    popupAnchor: [0, -40],
   });
 
 export const createAvatarIcon = (avatarPath, name = "") =>
