@@ -8,12 +8,14 @@ import EditAccount from "../pages/accountSection/EditAccount.jsx";
 import Friends from "../pages/locationSection/Friends.jsx";
 import CrowdDensity from "../pages/locationSection/CrowdDensity.jsx";
 import Discover from "../pages/locationSection/Discover.jsx";
+import LoginSign from "../pages/logInSignUpSection/LoginSign.jsx";
 
 const AppRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Location />} />
+        <Route path="/" element={<LoginSign />} />
+        <Route path="/location" element={<Location />} />
         <Route path="/friends" element={<Friends />} />
         <Route path="/crowd/density" element={<CrowdDensity />} />
         <Route path="/friends/discover" element={<Discover />} />

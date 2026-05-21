@@ -84,7 +84,7 @@ const BottomTab = () => {
           </NavLink>
 
           <NavLink // Location
-            to="/"
+            to="/location"
             className="no-underline"
             onClick={() => handleScheduleClick(2)}
           >

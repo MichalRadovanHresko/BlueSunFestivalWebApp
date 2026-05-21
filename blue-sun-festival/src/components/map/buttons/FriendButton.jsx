@@ -8,7 +8,7 @@ const FriendButton = () => {
 
   return (
     <div className="absolute bottom-[7%] w-full flex justify-around items-end z-10">
-      <NavLink to="/">
+      <NavLink to="/location">
         <div className={sideBtn}>
           <LocationIcon />
         </div>

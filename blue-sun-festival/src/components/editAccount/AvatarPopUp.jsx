@@ -52,7 +52,7 @@ const AvatarPopUp = ({ open, onClose }) => {
         background: "white",
         padding: "0",
         width: "95%",
-        height: "85%",
+        height: "97%",
         borderRadius: "20px",
       }}
     >
