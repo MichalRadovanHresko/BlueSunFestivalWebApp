@@ -9,6 +9,7 @@ import Friends from "../pages/locationSection/Friends.jsx";
 import CrowdDensity from "../pages/locationSection/CrowdDensity.jsx";
 import Discover from "../pages/locationSection/Discover.jsx";
 import LoginSign from "../pages/logInSignUpSection/LoginSign.jsx";
+import FriendsList from "../pages/accountSection/FriendsList.jsx";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/account" element={<Account />} />
         <Route path="/account/edit" element={<EditAccount />} />
+        <Route path="/account/friends" element={<FriendsList />} />
         <Route path="/home" element={<Home />} />
       </Routes>
     </>

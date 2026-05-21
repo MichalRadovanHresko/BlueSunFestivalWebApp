@@ -1,18 +1,18 @@
 import { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import variant1 from "../../assets/editAccountIcons/icon2.png";
-import variant2 from "../../assets/editAccountIcons/icon3.png";
-import variant3 from "../../assets/editAccountIcons/icon4.png";
-import variant4 from "../../assets/editAccountIcons/icon5.png";
-import variant5 from "../../assets/editAccountIcons/icon6.png";
-import variant6 from "../../assets/editAccountIcons/icon7.png";
-import variant7 from "../../assets/editAccountIcons/icon8.png";
-import variant8 from "../../assets/editAccountIcons/icon9.png";
-import variant9 from "../../assets/editAccountIcons/icon10.png";
-import variant10 from "../../assets/editAccountIcons/icon11.png";
-import variant11 from "../../assets/editAccountIcons/icon12.png";
-import variant12 from "../../assets/editAccountIcons/icon13.png";
+import variant1 from "../../assets/editAccountIcons/icon1.png";
+import variant2 from "../../assets/editAccountIcons/icon2.png";
+import variant3 from "../../assets/editAccountIcons/icon3.png";
+import variant4 from "../../assets/editAccountIcons/icon4.png";
+import variant5 from "../../assets/editAccountIcons/icon5.png";
+import variant6 from "../../assets/editAccountIcons/icon6.png";
+import variant7 from "../../assets/editAccountIcons/icon7.png";
+import variant8 from "../../assets/editAccountIcons/icon8.png";
+import variant9 from "../../assets/editAccountIcons/icon9.png";
+import variant10 from "../../assets/editAccountIcons/icon10.png";
+import variant11 from "../../assets/editAccountIcons/icon11.png";
+import variant12 from "../../assets/editAccountIcons/icon12.png";
 
 const AVATARS = [
   variant1,
