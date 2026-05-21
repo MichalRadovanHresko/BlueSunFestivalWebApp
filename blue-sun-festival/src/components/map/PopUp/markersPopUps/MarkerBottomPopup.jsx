@@ -1,7 +1,6 @@
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import MarkerPopupContent from "./MarkerPopupContent";
-import "./markerBottomPopup.css";
 
 const MarkerBottomPopup = ({ marker, onClose }) => {
   return (
