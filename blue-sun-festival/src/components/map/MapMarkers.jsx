@@ -1,36 +1,29 @@
-import { useEffect, useRef } from "react";
-import L from "leaflet";
-import { createMarkerIcon } from "./mapIcons";
+import { useEffect, useRef, useState } from "react";
+import { markerData } from "./markers/markerData";
+import { createLayerFromMarkers } from "./markers/createLayerFromMarkers";
+import MarkerBottomPopup from "./popups/MarkerBottomPopup";
 
 const MapMarkers = ({ map, selectedFilter = "all" }) => {
   const markerLayersRef = useRef({ toilets: null, stages: null, drinks: null });
+  const [activeMarker, setActiveMarker] = useState(null);
 
   useEffect(() => {
     if (!map) {
       return;
     }
 
-    const stagesLayer = L.layerGroup([
-      L.marker([56.1199, 10.158893], { icon: createMarkerIcon() }),
-      L.marker([56.122, 10.160603], { icon: createMarkerIcon() }),
-      L.marker([56.12285, 10.161303], { icon: createMarkerIcon() }),
-    ]).addTo(map);
-
-    const drinksLayer = L.layerGroup([
-      L.marker([56.1218, 10.1587], { icon: createMarkerIcon() }),
-      L.marker([56.1216, 10.16], { icon: createMarkerIcon() }),
-      L.marker([56.1214, 10.1613], { icon: createMarkerIcon() }),
-      L.marker([56.1204, 10.1593], { icon: createMarkerIcon() }),
-      L.marker([56.1211, 10.1615], { icon: createMarkerIcon() }),
-    ]).addTo(map);
-
-    const toiletsLayer = L.layerGroup([
-        L.marker([56.1214, 10.1587], { icon: createMarkerIcon() }),
-      L.marker([56.1225, 10.161303], { icon: createMarkerIcon() }),
-      L.marker([56.1211, 10.16108], { icon: createMarkerIcon() }),
-      L.marker([56.1204, 10.16068], { icon: createMarkerIcon() }),
-      L.marker([56.1204, 10.1598], { icon: createMarkerIcon() }),
-    ]).addTo(map);
+    const stagesLayer = createLayerFromMarkers(
+      markerData.stages,
+      setActiveMarker,
+    ).addTo(map);
+    const drinksLayer = createLayerFromMarkers(
+      markerData.drinks,
+      setActiveMarker,
+    ).addTo(map);
+    const toiletsLayer = createLayerFromMarkers(
+      markerData.toilets,
+      setActiveMarker,
+    ).addTo(map);
 
     markerLayersRef.current = {
       toilets: toiletsLayer,
@@ -81,7 +74,12 @@ const MapMarkers = ({ map, selectedFilter = "all" }) => {
     drinks.addTo(map);
   }, [map, selectedFilter]);
 
-  return null;
+  return (
+    <MarkerBottomPopup
+      marker={activeMarker}
+      onClose={() => setActiveMarker(null)}
+    />
+  );
 };
 
 export default MapMarkers;
